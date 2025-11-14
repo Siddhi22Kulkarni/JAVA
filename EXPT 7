@@ -1,0 +1,144 @@
+Experiment 7
+Code for Inheritance:
+ import java.util.*;
+class Player{
+	Player(){
+		System.out.println("Welcome to ground");
+	}
+}
+
+class Cricket_Player extends Player{
+	Cricket_Player(){
+	System.out.println("You selected Cricket");
+	}
+}
+
+class Football_Player extends Player{
+	Football_Player(){
+	System.out.println("You selected Football");
+	}
+}
+
+class Hockey_Player extends Player{
+	Hockey_Player(){
+	System.out.println("You selected Hockey");
+	}
+}
+class Inherit{
+public static void main(String args[]){
+	Player obj1= new Player();
+	Cricket_Player obj2 = new Cricket_Player();
+	Football_Player obj3 = new Football_Player();
+	Hockey_Player obj4 = new Hockey_Player();
+ }
+}
+Output:
+PS D:\TE-10> javac Inherit.java
+PS D:\TE-10> java Inherit
+Welcome to ground
+Welcome to ground
+You selected Cricket
+Welcome to ground
+You selected Football
+Welcome to ground
+You selected Hockey
+Code for Real World Application of Inheritance:
+// Parent class (Superclass)
+class Vehicle {
+    // Fields common to all vehicles
+    String brand;
+    int year;
+
+    // Constructor to initialize common fields
+    public Vehicle(String brand, int year) {
+        this.brand = brand;
+        this.year = year;
+    }
+
+    // Method to display vehicle info
+    public void displayInfo() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Year: " + year);
+    }
+
+    // Method to be overridden by child classes
+    public void startEngine() {
+        System.out.println("Starting the engine...");
+    }
+}
+
+// Child class Car inherits from Vehicle
+class Car extends Vehicle {
+    int doors;
+
+    // Constructor specific to Car
+    public Car(String brand, int year, int doors) {
+        super(brand, year); // Calling the parent class constructor
+        this.doors = doors;
+    }
+
+    // Overriding the startEngine method for Car
+    @Override
+    public void startEngine() {
+        System.out.println("Starting the car engine with a roar...");
+    }
+
+    // Method to display Car-specific info
+    public void displayCarInfo() {
+        displayInfo();
+        System.out.println("Doors: " + doors);
+    }
+}
+
+// Child class Bike inherits from Vehicle
+class Bike extends Vehicle {
+    boolean hasSideCar;
+
+    // Constructor specific to Bike
+    public Bike(String brand, int year, boolean hasSideCar) {
+        super(brand, year); // Calling the parent class constructor
+        this.hasSideCar = hasSideCar;
+    }
+
+    // Overriding the startEngine method for Bike
+    @Override
+    public void startEngine() {
+        System.out.println("Starting the bike engine with a vroom...");
+    }
+
+    // Method to display Bike-specific info
+    public void displayBikeInfo() {
+        displayInfo();
+        System.out.println("Has sidecar: " + hasSideCar);
+    }
+}
+
+public class InheritanceDemo {
+    public static void main(String[] args) {
+        // Create a Car object
+        Car car = new Car("Toyota", 2020, 4);
+        car.displayCarInfo();
+        car.startEngine();
+
+        System.out.println("\n");
+
+        // Create a Bike object
+        Bike bike = new Bike("Harley Davidson", 2021, true);
+        bike.displayBikeInfo();
+        bike.startEngine();
+    }
+}
+Output:
+PS D:\TE-10> javac InheritanceDemo.java
+PS D:\TE-10> java InheritanceDemo
+Brand: Toyota
+Year: 2020
+Doors: 4
+Starting the car engine with a roar...
+
+
+Brand: Harley Davidson
+Year: 2021
+Has sidecar: true
+Starting the bike engine with a vroom...
+
