@@ -1,0 +1,35 @@
+Experiment No.9
+Exception Handling
+Code
+public class ExceptionDemo
+{
+	public static void main(String[] args)
+	{
+	int x,y;
+	int a=10,b=5,c=5;
+	try 
+	{
+	 x= a /(b-c);
+	 System.out.println(x);
+	}
+	catch(Exception e)
+	{
+		System.out.println("Exception Handled");
+		System.out.println(e);
+	}
+		y= a/(b+c);
+		System.out.println(y);
+		System.out.println("End of try-catch block");
+	}
+}
+
+
+Output
+D:\TE-Gauri> javac ExceptionDemo.java
+D:\TE-Gauri> java ExceptionDemo
+Exception Handled
+java.lang.ArithmeticException: / by zero
+1
+End of try-catch block
+
+D:\TE-Gauri>
