@@ -1,0 +1,50 @@
+Experiment 3
+Code:
+import java.io.*;
+import java.util.*;
+public class Rectangle{
+double width, length, area;
+String colour;
+Scanner sc=new Scanner (System.in);
+Rectangle()
+{
+ System.out.print("Enter the Length:");
+
+	length = sc.nextDouble();
+	System.out.print("Enter the Width:");
+	width=sc.nextDouble();
+	System.out.print("Enter the Colour: ");
+	colour=sc.next();
+	area = length*width;
+	System.out.println("Area of Rectangle: "+area);
+}
+
+
+public static void main(String[]args)
+
+{
+	System.out.println("First Rectangle:");
+	Rectangle r1=new Rectangle();
+	System.out.println("Second Rectangle:");
+	Rectangle r2=new Rectangle();
+	if(r1.area==r2.area && r1.colour.equals(r2.colour))
+	System.out.println("Matching Rectangle:");
+	else
+	System.out.println("Not Matching Rectangle");
+
+}
+}
+Output:
+PS C:\Users\ OneDrive\Desktop\practice> javac Rectangle.java
+PS C:\Users\ OneDrive\Desktop\practice> java Rectangle
+First Rectangle:
+Enter the Length:12
+Enter the Width:6
+Enter the Colour: red
+Area of Rectangle: 72.0
+Second Rectangle:
+Enter the Length:25
+Enter the Width:7
+Enter the Colour black
+Area of Rectangle: 175.0
+Not Matching Rectangle
