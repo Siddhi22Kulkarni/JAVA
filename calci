@@ -1,0 +1,58 @@
+EXPERIMENT 2:
+
+CALCULATOR PROGRAM :
+import java.util.*;
+public class Calci
+{
+	public static void main(String args[])
+	{
+	char operator;
+	int no1,no2,ans;
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter values of no1 and no2:");
+	no1=sc.nextInt();
+	no2=sc.nextInt();
+	System.out.println("choose an operator:+,-,*,/");
+	
+	operator=sc.next().charAt(0);
+	
+	switch(operator)
+	{
+	  case'+':
+	  ans=no1+no2;
+	  System.out.println("result of addn:"+ans);
+	  break;
+	  case'-':
+	  ans=no1-no2;
+	  System.out.println("result of sub:"+ans);
+	  break;
+	  case'*':
+	  ans=no1*no2;
+	  System.out.println("result of mul:"+ans);
+	  break;
+	  case'/':
+	  ans=no1/no2;
+	  System.out.println("result of div:"+ans);
+	  break;
+	  default:
+	  System.out.println("invalid operator");
+	}
+	
+
+	}
+}
+OUTPUT:
+D:\kalyani.java>javac Calci.java
+D:\kalyani.java>java Calci
+Enter values of no1 and no2:
+10 30
+choose an operator:+,-,*,/
++
+result of addn:40
+Enter values of no1 and no2:
+2 4
+choose an operator:+,-,*,/
+*
+result of mul:8
+
+
