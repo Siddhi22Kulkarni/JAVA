@@ -1,0 +1,64 @@
+STAR PATTERN PROGRAM:
+import java.util.*;
+class Star_patt
+{
+	public static void main(String args[])
+	{
+	int i,j;
+	for(i=1;i<=5;i++)
+	  {
+	  for(int s=1;s<=5-i;s++)
+	  {
+	  System.out.print(" ");
+	  }
+	  for(j=1;j<=2*i-1;j++)
+	  {
+	  System.out.print("*");
+	  }
+	  System.out.println();
+	}
+}
+}
+OUTPUT:
+D:\aditi.java>javac Star_patt.java
+D:\aditi.java>java Star_patt
+    *
+   ***
+  *****
+ *******
+*********
+
+D:\aditi.java>
+STUDENT MARKS PROGRAM
+import java.util.*;
+class Marks
+{
+	public static void main(String args[])
+	{
+	Scanner SC=new Scanner (System.in);
+	System.out.println("Enter num");
+    int num=SC.nextInt();
+    if (num<=100 && num>=70)
+    {
+    System.out.println("Distinction");
+    }
+    if (num<=70 && num>=60)
+    {
+    System.out.println("first class");
+    }
+    if (num<=50 && num>=40)
+    {
+    System.out.println("pass");
+    }
+    else
+    {
+    System.out.println("fail");
+    }
+	}
+}
+OUTPUT:
+D:\aditi.java>javac Marks.java
+D:\aditi.java>java Marks
+Enter num
+80
+Distinction
