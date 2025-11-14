@@ -1,0 +1,46 @@
+Experiment 4
+Code for constructor overloading:
+import java.util.*;
+class A1
+{
+	A1(){
+	System.out.println("constructor without argument");
+	}
+	A1(int a){
+	System.out.println("constructor with argument");
+	}
+
+	public static void main(String args[]){
+	A1 obj1 = new A1();
+	A1 obj2 = new A1(20);
+	}
+}
+Output:
+PS C:\Users\OneDrive\Desktop\practice> javac A1.java
+PS C:\Users\ OneDrive\Desktop\practice> java A1
+constructor without argument
+constructor with argument
+Code for method overloading:
+import java.util.*;
+public class AA1{
+	void add(){
+	int a=10,b=20;
+	int c=a+b;
+	System.out.println("Sum="+c);
+	}
+	void add(int x, int y){
+	int z=x+y;
+	System.out.println("Sum="+z);
+	}
+	public static void main(String args[]){
+	AA1 obj = new AA1();
+	obj.add();
+	obj.add(30,40);
+	}
+}
+Output:
+PS C:\Users\OneDrive\Desktop\practice> javac AA1.java
+PS C:\Users\ OneDrive\Desktop\practice> java AA1
+Sum=30
+Sum=70
+
