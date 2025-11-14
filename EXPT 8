@@ -1,0 +1,77 @@
+EXPERIMENT 8
+1.INTERFACE CODE
+interface A
+{
+	void Adisplay();	
+}
+ class AB implements A
+ {
+	public void Adisplay()
+	{
+	System.out.println("A display");
+	}
+ }
+ public class InterfaceDemo{
+  public static void main(String[]args){
+  AB obj=new AB();
+  obj.Adisplay();
+  }
+  }
+
+OUTPUT
+PS D:\TE-10> javac InterfaceDemo.java
+PS D:\TE-10> java InterfaceDemo
+A display
+PS D:\TE-10>
+2] Code
+interface printable
+{
+  void print();
+}
+class A6 implements printable
+{
+  public void print()
+   {	
+       System.out.print("Hello");
+}
+   public static Void main(String[]args)
+{
+   A6 obj=new A6();
+   obj.print();
+ } 
+}
+Output
+Hello
+3] Code
+interface Printable
+{
+	void print();
+}
+interface Showable
+{
+	void show();
+}
+class A7 implements Printable,Showable
+{
+	public void print()
+	{
+	System.out.println("Hello");
+	}
+	public void show()
+	{
+	System.out.println("Welcome");
+	}
+public static void main(String []args){
+A7 obj=new A7();
+obj.print();
+obj.show();
+	}
+
+}
+Output
+PS D:\TE-10> javac A7.java
+PS D:\TE-10> java A7
+Hello
+Welcome
+PS D:\TE-10>
+
