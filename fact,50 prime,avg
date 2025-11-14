@@ -1,0 +1,121 @@
+                           Experiment No:-1
+#To find factorial of a number:
+import java.util.*;
+class Factorial
+{
+	public static void main(String args[])
+	{
+		int i,no;
+		long fact=1;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter no:");
+		no=sc.nextInt();
+		for(i=1;i<=no;i++)
+		{
+			fact=fact*i;
+		}
+		System.out.println("Factorial of no="+fact);
+
+
+	}
+}
+Output:-
+PS C:\Users\ OneDrive\Desktop\practice> javac Factorial.java
+PS C:\Users\ OneDrive\Desktop\practice> java Factorial
+Enter no:
+2
+Factorial of no=2
+PS C:\Users\ OneDrive\Desktop\practice> java Factorial
+Enter no:
+4
+Factorial of no=24
+
+#To display first 50 prime number code:-
+import java.util.*;
+class ExpPrime
+{
+	public static void main(String args[])
+	{
+		int factor,i,j;
+		for(i=1;i<=50;i++)
+		{
+			factor=0;
+			for(j=1;j<=i;j++)
+			{
+			if(i%j==0)
+		        factor++;
+			}
+			if(factor == 2)
+			{
+				System.out.println(i);
+			}
+        }
+    }
+ }       
+Output:-
+PS C:\Users\ OneDrive\Desktop\practice> javac ExpPrime.java
+PS C:\Users\ OneDrive\Desktop\practice> java ExpPrime
+2
+3
+5
+7
+11
+13
+17
+19
+23
+29
+31
+37
+41
+43
+47
+
+
+
+
+
+
+
+
+
+
+#To find average of N number code:-
+import java.util.*;
+class Average
+{
+	public static void main(String args[])
+	{
+		int no1,no2,no3,no4,no5,ans;
+		Scanner SC=new Scanner(System.in);
+		System.out.println("Enter Number 1:");
+		no1=SC.nextInt();
+		System.out.println("Enter Number 2:");
+		no2=SC.nextInt();
+		System.out.println("Enter Number 3:");
+		no3=SC.nextInt();
+		System.out.println("Enter Number 4:");
+		no4=SC.nextInt();
+		System.out.println("Enter Number 5:");
+		no5=SC.nextInt();
+		ans=(no1+no2+no3+no4+no5)/5;
+		System.out.println("Average="+ans);
+	}
+}
+Output:-
+PS C:\Users\OneDrive\Desktop\practice> javac Average.java
+PS C:\Users\ OneDrive\Desktop\practice> java Average
+Enter Number 1:
+25
+Enter Number 2:
+21
+Enter Number 3:
+23
+Enter Number 4:
+20
+Enter Number 5:
+26
+Average=23
+
+
+
